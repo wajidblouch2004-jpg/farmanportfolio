@@ -167,7 +167,7 @@
 }
 
 .hero-profile-img {
-    width: clamp(180px, 30vw, 400px);
+    width: auto;
     height: auto;
     /* Aspect ratio maintain hogi */
     max-height: 500px;
@@ -185,7 +185,7 @@
     border: 1px solid rgba(255, 255, 255, 0.42);
     border-radius: 14px;
     padding: 0.7rem 1rem;
-    min-width: 145px;
+    width: auto !important;
     color: #ffffff;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
     animation: floatCard 4s ease-in-out infinite;
@@ -245,12 +245,11 @@
     position: relative;
     z-index: 2;
     width: max-content;
-    
+
     /* Wrapper ki height image ke hisaab se adjust hogi */
 }
 
 .hero-profile-img {
-    width: clamp(180px, 30vw, 400px);
     height: 100%;
 
     object-fit: cover;
@@ -328,12 +327,12 @@
     .hero-profile-img {
         width: clamp(120px, 40vw, 240px);
     }
-    
+
     .glass-left,
     .glass-right {
         display: none;
     }
-    
+
     .hero {
         padding: 40px 15px;
         min-height: 100vh;
@@ -562,9 +561,9 @@ section {
 }
 
 @property --p {
-  syntax: '<number>';
-  inherits: true;
-  initial-value: 0;
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
 }
 
 /* ===== NEW ABOUT SECTION CSS ===== */
@@ -583,7 +582,7 @@ section {
 
 .about-white-card {
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 576px) {
@@ -983,9 +982,11 @@ section {
     0% {
         transform: scale(0.95);
     }
+
     50% {
         transform: scale(1.02);
     }
+
     100% {
         transform: scale(1);
     }
@@ -996,10 +997,12 @@ section {
         opacity: 0.7;
         transform: scale(0.95);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.05);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -1026,6 +1029,7 @@ section {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1049,6 +1053,7 @@ section {
         opacity: 0;
         transform: scale(0.95) translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: scale(1) translateY(0);
@@ -1076,9 +1081,11 @@ section {
         opacity: 1;
         transform: scale(1) translateY(0);
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 0;
         transform: scale(0.92) translateY(10px);
@@ -1090,9 +1097,11 @@ section {
         opacity: 0;
         transform: scale(0.92) translateY(10px);
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 1;
         transform: scale(1) translateY(0);
@@ -1347,15 +1356,20 @@ section {
 }
 
 @keyframes blobMove {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0) scale(1);
     }
+
     25% {
         transform: translate(30px, -50px) scale(1.1);
     }
+
     50% {
         transform: translate(-20px, 20px) scale(0.9);
     }
+
     75% {
         transform: translate(50px, 50px) scale(1.05);
     }
@@ -1379,6 +1393,7 @@ section {
         opacity: 0;
         transform: translateY(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1424,6 +1439,7 @@ section {
         opacity: 0;
         transform: translateX(-50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1563,7 +1579,7 @@ section {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.3), transparent);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -1588,6 +1604,7 @@ section {
         opacity: 0;
         transform: translateX(50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1616,9 +1633,12 @@ section {
 }
 
 @keyframes formGlow {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0);
     }
+
     50% {
         transform: translate(50px, 50px);
     }
@@ -1636,16 +1656,28 @@ section {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.form-group:nth-child(1) { animation-delay: 0.1s; }
-.form-group:nth-child(2) { animation-delay: 0.2s; }
-.form-group:nth-child(3) { animation-delay: 0.3s; }
-.form-group:nth-child(4) { animation-delay: 0.4s; }
+.form-group:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.form-group:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.form-group:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.form-group:nth-child(4) {
+    animation-delay: 0.4s;
+}
 
 .form-field-wrapper {
     position: relative;
@@ -1710,8 +1742,8 @@ section {
     transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.form-input:focus ~ .input-border,
-.form-textarea:focus ~ .textarea-border {
+.form-input:focus~.input-border,
+.form-textarea:focus~.textarea-border {
     width: 100%;
 }
 
@@ -1729,8 +1761,8 @@ section {
     pointer-events: none;
 }
 
-.form-input:focus ~ .input-focus-effect,
-.form-textarea:focus ~ .textarea-focus-effect {
+.form-input:focus~.input-focus-effect,
+.form-textarea:focus~.textarea-focus-effect {
     opacity: 1;
 }
 
@@ -1775,7 +1807,7 @@ section {
     left: 50%;
     width: 0;
     height: 0;
-    background: radial-gradient(circle, rgba(255,255,255,0.3), transparent);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     transition: width 0.6s, height 0.6s;
@@ -1843,9 +1875,11 @@ section {
     0% {
         transform: scale(0);
     }
+
     50% {
         transform: scale(1.2);
     }
+
     100% {
         transform: scale(1);
     }
@@ -1856,6 +1890,14 @@ section {
     .contact-section {
         padding: 60px 0;
         min-height: auto;
+    }
+
+    .hero-watermark {
+        display: none !important;
+    }
+
+    .hero-floaters {
+        display: none !important;
     }
 
     .contact-title {
@@ -1877,7 +1919,18 @@ section {
         font-size: 2rem;
     }
 
-    .contact-form {
+    .hero-profile-wrapper {
+        width: 100%;
+        
+    }
+
+    .hero-profile-img {
+        width: 100%;
+        height: auto;
+
+    }
+
+     .contact-form {
         padding: 25px;
     }
 
