@@ -665,35 +665,16 @@ section {
 }
 
 .service-card {
-    transition: all 0.45s ease;
-    border-radius: 24px;
-    border: 1px solid rgba(99, 102, 241, 0.08);
-    position: relative;
-    overflow: hidden;
-    min-height: 320px;
-    padding: 2.5rem 1.8rem;
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background: #ffffff;
+display: flex;
+border-radius: 16px;
+background: #F7F7F7;
+padding: 34px 47px 34px 48px;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
 }
 
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
-    transition: left 0.6s ease;
-}
 
-.service-card:hover::before {
-    left: 100%;
-}
 
 .service-card p {
     font-size: 0.95rem;
@@ -704,11 +685,6 @@ section {
     transition: all 0.4s ease;
 }
 
-.service-card.featured {
-    background: linear-gradient(180deg, #4715a8 0%, #7c3aed 100%);
-    border-color: transparent;
-    color: #ffffff;
-}
 
 .service-card.featured .service-icon {
     color: #ffffff;
@@ -720,9 +696,9 @@ section {
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
-    border-color: rgba(99, 102, 241, 0.2);
+
+opacity: 0.95;
+background-color: #c8cbcb;
 }
 
 .service-icon {
@@ -943,30 +919,61 @@ section {
 }
 
 .portfolio-tab-btn {
-    background: transparent;
-    border: 2px solid #e0e0e0;
-    padding: 12px 28px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-    font-weight: 600;
-    font-size: 0.95rem;
-    letter-spacing: 0.3px;
-    position: relative;
-    color: #333;
-    overflow: hidden;
+display: flex;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 8px;
+background: #F7F7F7;
+color: #AAA;
+text-align: justify;
+
+/* ENG/20/Medium */
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+border: none !important;
 }
 
-.portfolio-tab-btn:hover .tab-badge {
-    color: #333;
+.portfolio-tab-btn:hover {
+  color: #F7F7F7;
+text-align: justify;
+
+/* ENG/20/Medium */
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+display: flex;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 8px;
+background: linear-gradient(134deg, #5D0DB3 92.62%, #530C9F 92.62%);
 }
 
 .portfolio-tab-btn.active {
-    background: linear-gradient(135deg, #5D0DB3, #8B2FE5);
-    border-color: transparent;
-    color: #fff;
-    box-shadow: 0 12px 30px rgba(93, 13, 179, 0.25);
-    animation: tabActivate 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+color: #F7F7F7;
+text-align: justify;
+
+/* ENG/20/Medium */
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+display: flex;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 8px;
+background: linear-gradient(134deg, #5D0DB3 92.62%, #530C9F 92.62%);
 }
 
 .portfolio-tab-btn.active::before {
@@ -1121,6 +1128,7 @@ section {
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 5px !important;
 }
 
 .portfolio-card:hover .portfolio-card-img {
